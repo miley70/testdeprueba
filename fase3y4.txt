@@ -1,0 +1,138 @@
+DESARROLLO FASE 3
+
+def valoredad (edad):
+   if edad >= 18 and edad <= 63:
+    print(f"La edad es coherente para la contratación! {edad}")
+   else:
+    print(f"La edad NO es coherente para la contratación! {edad}")
+
+def estado (estcivil):
+   if estcivil == "casado" or estcivil == "soltero" or estcivil =="separado":
+    print("El estado civil es valido")
+   else:
+    print("El estado civil no aplica")
+
+def numhijos (hijos):
+   if hijos >0:
+    print("resultado positivo")
+   else:
+    print("resultado negativo")
+    
+def numsal (salario):
+  if salario >0:
+    print("resultado positivo")
+  else:
+    print("resultado negativo")
+
+
+def diaslab (diaslaborados):
+    if diaslaborados >0 and diaslaborados <30:
+     print("Días laborados dentro del rango")
+    else:
+      print("Días laborados fuera del rango")
+    
+
+resp = "si"
+while resp == "si" or resp == "SI" or resp == "yes":
+  estcivil = input("Ingrese su estado civil: ")
+  estado(estcivil)
+  edad = int(input("Digite la edad: "))
+  valoredad(edad)
+  hijos = int(input("Digite número de hijos: "))
+  numhijos(hijos)
+  salario = float(input("Digite su salario: "))
+  numsal(salario)
+  diaslaborados = int(input("Digite los dias laborados: "))
+  diaslab(diaslaborados)
+  resp = input("¿Desea realizar otro registro?: ")
+
+
+
+DESARROLLO FASE 4
+
+empleados = ["Harlyn Aguilar","Juan Pesca", "Johan Orjuela", "Camila Alvarez", "Jhon Martinez"]
+
+tamano = len(empleados)
+print(tamano)
+
+
+emple = []
+
+def emples(emple):
+  con=0
+  for i in emple:
+    con=con+1
+    print(i)
+  tamano = len(emple)
+  print(tamano)
+  print(con)
+
+resp = "si"
+while resp == "si" or resp == "SI":
+  nomempleado = input("Digite el nombre del empleado: ")
+  emple.append(nomempleado)
+  emples(emple)
+  print(emple)
+  resp = input("¿Desea agregar otro elemento a la lista? \n")
+
+
+sueldos=[]
+
+resp ="si"
+while resp =="si" or resp =="SI":
+  valor = float(input("Ingrese el sueldo del empleado: "))
+  sueldos.append(valor)
+  print(sueldos)
+  resp = input("¿Desea agregar otro?\n")
+  
+print(sueldos)
+
+suma= sum(sueldos)
+print(f"Total a pagar por concepto de sueldos básicos: {suma}")
+
+nomempleado=[]
+diaslab=[]
+
+resp ="si"
+while resp =="si" or resp =="SI":
+  empleado = input("Ingrese el nombre del empleado: ")
+  valordias = int(input("Ingrese los días laborados por el empleado: "))
+  nomempleado.append(empleado), diaslab.append(valordias)
+  nomempleado.sort(), diaslab.sort()
+  print(nomempleado,diaslab)
+  resp = input("¿Desea agregar otro?\n")
+
+
+nomempleado=[]
+numhijos=[]
+
+resp ="si"
+while resp =="si" or resp =="SI":
+  empleado = input("Ingrese el nombre y apellido del empleado: ")
+  valorhijos = int(input("Ingrese la cantidad de hijos del empleado: "))
+  nomempleado.append(empleado), numhijos.append(valorhijos)
+  nomempleado.sort(),numhijos.sort()
+  print(nomempleado, numhijos)
+  resp = input("¿Desea agregar otro?\n")
+print(nomempleado)
+print(numhijos)
+print(f"El trabajador que tiene más hijos es: {nomempleado[1]}, con {numhijos[x]}")
+
+estatus=[]
+
+def estatu(estatus):
+  con=0
+  for i in estatus:
+      con=con+1
+      print(i)
+  tamano = len(estatus)
+  print(tamano)
+  print(con)
+
+resp ="si"
+while resp =="si" or resp =="SI":
+  empleado = input("Ingrese el estado civil del empleado: ")
+  estatus.append(empleado)
+  estatu(estatus)
+  print(estatus)
+  resp = input("¿Desea agregar otro?\n")
